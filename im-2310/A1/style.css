@@ -18,7 +18,13 @@ h2 {
     text-align: center;
 }
 
+li {
+    font-size: 14px;
+    color: rgb(6, 242, 34);
+}
+
 p {
+    padding-left: 30px;
     font-size: 14px;
     color: rgb(6, 242, 34);
 }
