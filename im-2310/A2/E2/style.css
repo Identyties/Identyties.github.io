@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+ --col01: rgb(208, 222, 21);
+ --col02: rgb(255, 255, 255);
+ --col03: rgb(212, 19, 233);
+ --col04: rgb(0,0,0);
+}
+
+
+/* I experimented with the idea of meshing together the colours so that despite their unique 4 colour groups, they would unintentionally mesh with one another and create bigger
+shapes than just boxes and rectangles. However due to the border requirement I rethought my idea, and came to the conclusion an obvious border that has the colour of different
+box would be a good Idea.
+
+I experimented with the different border types landing on dotted as it worked quite well and stood out. I tried adding a border radius as well but it just made the page look
+worse than it already did, so I decided against it.
+
+I do like how it ended up, giving the page a patchwork feeling, the colour pallete helping to match it, having seemingly random colours come together to make one whole thing.
+Which exemplifies how a bunch of factors come together to make one whole person. Or thats how I like to think about it.*/
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "OneHalf OneHalf OneHalf OneHalf OneDouble OneDouble OnetwoDouble OnetwoDouble"
+    "TwoFour TwoFour TwoFour TwoFour TwoDouble TwoDouble OnetwoDouble OnetwoDouble"
+    "ThreefourOne ThreefourTwo ThreefourThree ThreefourFour ThreefourFive ThreefourSix ThreeDouble ThreeDouble"
+    "ThreefourOne ThreefourTwo ThreefourThree ThreefourFour ThreefourFive ThreefourSix FourDouble FourDouble"
+    "FiveQuintuple FiveQuintuple FiveQuintuple FiveQuintuple FiveQuintuple FiveTriple FiveTriple FiveTriple"
+    "SixTriple SixTriple SixTriple SixQuintuple SixQuintuple SixQuintuple SixQuintuple SixQuintuple"
+    "SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo"
+    "SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo"
+    "NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalftwo NinetenHalftwo NinetenHalftwo NinetenHalftwo"
+    "NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalftwo NinetenHalftwo NinetenHalftwo NinetenHalftwo"
+    "EleventwelveDouble EleventwelveDouble ElevenDouble ElevenDouble EleventwelveHalf EleventwelveHalf EleventwelveHalf EleventwelveHalf"
+    "EleventwelveDouble EleventwelveDouble TwelveDouble TwelveDouble EleventwelveHalf EleventwelveHalf EleventwelveHalf EleventwelveHalf";
+    width: 99vw;
+    height: 177vw;
+}
+
+.TwoFour { grid-area: TwoFour; 
+background-color: var(--col01);
+border-style: dotted;
+border-color: var(--col04);
+}
+
+.ThreeDouble { grid-area: ThreeDouble; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.FourDouble { grid-area: FourDouble; 
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.FiveQuintuple { grid-area: FiveQuintuple; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+.FiveTriple { grid-area: FiveTriple; 
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.SixTriple { grid-area: SixTriple; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.SixQuintuple { grid-area: SixQuintuple; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.SeveneightHalfone { grid-area: SeveneightHalfone; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.SeveneightHalftwo { grid-area: SeveneightHalftwo; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.NinetenHalfone { grid-area: NinetenHalfone; 
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.NinetenHalftwo { grid-area: NinetenHalftwo; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+.EleventwelveDouble { grid-area: EleventwelveDouble; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+.ElevenDouble { grid-area: ElevenDouble; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.TwelveDouble { grid-area: TwelveDouble; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.EleventwelveHalf { grid-area: EleventwelveHalf; 
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.OneHalf { grid-area: OneHalf; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.OneDouble { grid-area: OneDouble;
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.TwoDouble { grid-area: TwoDouble; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.OnetwoDouble { grid-area: OnetwoDouble; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+.ThreefourThree { grid-area: ThreefourThree; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+.ThreefourTwo { grid-area: ThreefourTwo; 
+  background-color: var(--col02);
+  border-style: dotted;
+border-color: var(--col03);
+}
+
+.ThreefourOne { grid-area: ThreefourOne; 
+  background-color: var(--col01);
+  border-style: dotted;
+border-color: var(--col04);
+}
+
+.ThreefourFour { grid-area: ThreefourFour; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.ThreefourFive { grid-area: ThreefourFive; 
+  background-color: var(--col04);
+  border-style: dotted;
+border-color: var(--col01);
+}
+
+.ThreefourSix { grid-area: ThreefourSix; 
+  background-color: var(--col03);
+  border-style: dotted;
+border-color: var(--col02);
+}
+
+
+  
+  
+
+
+
