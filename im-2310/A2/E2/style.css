@@ -1,201 +1,115 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
 }
 
-:root {
- --col01: rgb(208, 222, 21);
- --col02: rgb(255, 255, 255);
- --col03: rgb(212, 19, 233);
- --col04: rgb(0,0,0);
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#f152ff;
+  --col-04:#ade325;
+  --border: 1px solid var(--col-02);
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 3vw;
+  font-family: sans-serif;
+  font-size: medium;
+}
+/* I changed the font and size to something more accessible for most audiences. Also because I like sans-serif */
 
-/* I experimented with the idea of meshing together the colours so that despite their unique 4 colour groups, they would unintentionally mesh with one another and create bigger
-shapes than just boxes and rectangles. However due to the border requirement I rethought my idea, and came to the conclusion an obvious border that has the colour of different
-box would be a good Idea.
-
-I experimented with the different border types landing on dotted as it worked quite well and stood out. I tried adding a border radius as well but it just made the page look
-worse than it already did, so I decided against it.
-
-I do like how it ended up, giving the page a patchwork feeling, the colour pallete helping to match it, having seemingly random colours come together to make one whole thing.
-Which exemplifies how a bunch of factors come together to make one whole person. Or thats how I like to think about it.*/
-
-.container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "OneHalf OneHalf OneHalf OneHalf OneDouble OneDouble OnetwoDouble OnetwoDouble"
-    "TwoFour TwoFour TwoFour TwoFour TwoDouble TwoDouble OnetwoDouble OnetwoDouble"
-    "ThreefourOne ThreefourTwo ThreefourThree ThreefourFour ThreefourFive ThreefourSix ThreeDouble ThreeDouble"
-    "ThreefourOne ThreefourTwo ThreefourThree ThreefourFour ThreefourFive ThreefourSix FourDouble FourDouble"
-    "FiveQuintuple FiveQuintuple FiveQuintuple FiveQuintuple FiveQuintuple FiveTriple FiveTriple FiveTriple"
-    "SixTriple SixTriple SixTriple SixQuintuple SixQuintuple SixQuintuple SixQuintuple SixQuintuple"
-    "SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo"
-    "SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalfone SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo SeveneightHalftwo"
-    "NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalftwo NinetenHalftwo NinetenHalftwo NinetenHalftwo"
-    "NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalfone NinetenHalftwo NinetenHalftwo NinetenHalftwo NinetenHalftwo"
-    "EleventwelveDouble EleventwelveDouble ElevenDouble ElevenDouble EleventwelveHalf EleventwelveHalf EleventwelveHalf EleventwelveHalf"
-    "EleventwelveDouble EleventwelveDouble TwelveDouble TwelveDouble EleventwelveHalf EleventwelveHalf EleventwelveHalf EleventwelveHalf";
-    width: 99vw;
-    height: 177vw;
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
 }
 
-.TwoFour { grid-area: TwoFour; 
-background-color: var(--col01);
-border-style: dotted;
-border-color: var(--col04);
+.FilterSection{
+
 }
 
-.ThreeDouble { grid-area: ThreeDouble; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
+.FilterBox{
+
 }
 
-.FourDouble { grid-area: FourDouble; 
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
+/* The two colours for the button are the ones that are most commonly associated with hyperlinks and used hyperlinks so it just made sense to use them both here. */
+
+.FilterButton{
+color: #f152ff;
 }
 
-.FiveQuintuple { grid-area: FiveQuintuple; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
+.SelectedFilter{
+  color: blue;
 }
 
-.FiveTriple { grid-area: FiveTriple; 
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
+.RecipeLink{
+
 }
 
-.SixTriple { grid-area: SixTriple; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
+.RecipeName{
+
 }
 
-.SixQuintuple { grid-area: SixQuintuple; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
+.Author{
+
 }
 
-.SeveneightHalfone { grid-area: SeveneightHalfone; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
+.RecipeImageContainer{
+
 }
 
-.SeveneightHalftwo { grid-area: SeveneightHalftwo; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
+.RecipeImg{
+
 }
 
-.NinetenHalfone { grid-area: NinetenHalfone; 
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
+.Attribution{
+
 }
 
-.NinetenHalftwo { grid-area: NinetenHalftwo; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
+.Publisher{
+
 }
 
-.EleventwelveDouble { grid-area: EleventwelveDouble; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
+.Cuisine{
+
 }
 
-.ElevenDouble { grid-area: ElevenDouble; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
+.TimeToCook{
+
 }
 
-.TwelveDouble { grid-area: TwelveDouble; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
+.SkillLevel{
+
 }
 
-.EleventwelveHalf { grid-area: EleventwelveHalf; 
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
+.Course{
+
 }
 
-.OneHalf { grid-area: OneHalf; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
+.Servings{
+
 }
 
-.OneDouble { grid-area: OneDouble;
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
+.Dietary{
+
 }
 
-.TwoDouble { grid-area: TwoDouble; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
+.DatePublished{
+
 }
 
-.OnetwoDouble { grid-area: OnetwoDouble; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
+.DateUpdated{
+
 }
 
-.ThreefourThree { grid-area: ThreefourThree; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
+.SpecialEquipment{
+
 }
-
-.ThreefourTwo { grid-area: ThreefourTwo; 
-  background-color: var(--col02);
-  border-style: dotted;
-border-color: var(--col03);
-}
-
-.ThreefourOne { grid-area: ThreefourOne; 
-  background-color: var(--col01);
-  border-style: dotted;
-border-color: var(--col04);
-}
-
-.ThreefourFour { grid-area: ThreefourFour; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
-}
-
-.ThreefourFive { grid-area: ThreefourFive; 
-  background-color: var(--col04);
-  border-style: dotted;
-border-color: var(--col01);
-}
-
-.ThreefourSix { grid-area: ThreefourSix; 
-  background-color: var(--col03);
-  border-style: dotted;
-border-color: var(--col02);
-}
-
-
-  
-  
-
-
 
