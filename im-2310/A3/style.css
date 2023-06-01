@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --col01: rgb(208, 222, 21);
+    --col02: rgb(255, 255, 255);
+    --col03: rgb(212, 19, 233);
+    --col04: rgb(0,0,0);
+    --col05: rgb(153, 152, 163);
+    --col06: rgb(189, 189, 191);
+   }
+
+
+   .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    width: 100vw;
+    height: 46vw;
+  }
+  
+  .OutTop { grid-area: 1 / 1 / 2 / 7; 
+    background-color: var(--col05);
+
+}
+  
+  .OutLeft { grid-area: 2 / 1 / 6 / 2; 
+    background-color: var(--col05);
+
+}
+  
+  .OutRight { grid-area: 2 / 6 / 6 / 7; 
+    background-color: var(--col05);
+
+}
+  
+  .OutBot { grid-area: 6 / 1 / 7 / 7; 
+    background-color: var(--col05);
+
+}
+  
+  .Final { grid-area: 2 / 2 / 6 / 6; 
+    background-color: var(--col06);
+    border-style: solid;
+    border-color: var(--col02);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: large;
+}
+
+  .OneA { grid-area: 2 / 2 / 3 / 3; 
+    background-color: var(--col01);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .TwoA { grid-area: 2 / 3 / 3 / 4; 
+    background-color: var(--col02);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .FourA { grid-area: 3 / 2 / 4 / 3; 
+    background-color: var(--col04);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .ThreeA { grid-area: 3 / 3 / 4 / 4; 
+    background-color: var(--col03);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .OneB { grid-area: 3 / 4 / 4 / 5; 
+    background-color: var(--col01);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .FourB { grid-area: 2 / 4 / 3 / 5; 
+    background-color: var(--col04);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .ThreeB { grid-area: 2 / 5 / 3 / 6; 
+    background-color: var(--col03);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .TwoB { grid-area: 3 / 5 / 4 / 6; 
+    background-color: var(--col02);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .ThreeC { grid-area: 4 / 2 / 5 / 3; 
+    background-color: var(--col03);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .TwoC { grid-area: 5 / 2 / 6 / 3; 
+    background-color: var(--col02);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .OneC { grid-area: 4 / 3 / 5 / 4; 
+    background-color: var(--col01);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .FourC { grid-area: 5 / 3 / 6 / 4; 
+    background-color: var(--col04);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .TwoD { grid-area: 4 / 4 / 5 / 5; 
+    background-color: var(--col02);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .FourD { grid-area: 4 / 5 / 5 / 6; 
+    background-color: var(--col04);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .ThreeD { grid-area: 5 / 4 / 6 / 5; 
+    background-color: var(--col03);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
+  .OneD { grid-area: 5 / 5 / 6 / 6; 
+    background-color: var(--col01);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--col02);
+}
+  
